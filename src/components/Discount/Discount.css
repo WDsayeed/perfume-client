@@ -1,0 +1,67 @@
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+.main-div-1,
+.main-div-2 {
+  transition: transform 0.5s;
+}
+
+.main-div-1:hover .desc-img-1 {
+  transform: scale(1.1);
+}
+.main-div-2:hover .desc-img-2 {
+  transform: scale(1.1);
+}
+.text-div{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        margin-left: 30px;
+        justify-content: center;
+        /* background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        opacity: 0;
+        transition: opacity 0.3s; */
+}
+.main-div-1:hover .text-div,
+.main-div-2:hover .text-div {
+  opacity: 1;
+}
+.shop-button{
+  display: inline-block;
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  /* text-decoration: underline;
+  text-underline-offset: 8px; */
+}
+
+.shop-button::before{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #116D6E;
+  transition: width 0.3s ease;
+}
+
+.shop-button:hover::before{
+width: 100%;
+color: #116D6E;
+}
+.shop-button:hover{
+color: #116D6E;
+}

@@ -1,0 +1,98 @@
+[
+        {
+                "name":"Kaydex Product Sample",
+                "img":"https://i.ibb.co/TBt2Q1y/product47.webp",
+                "description":"Quality That Lasts The Pia Armchair takes cues from retro design. With simple designer touches keeping things fresh and modern.",
+                "price":350.00,
+                "quantity":1,
+                "category":"men"
+        },
+        {
+                "name":"Guess Seductive",
+                "img":"https://i.ibb.co/V22dSck/product34.webp",
+                "description":"Quality That Lasts The Pia Armchair takes cues from retro design. With simple designer touches keeping things fresh and modern.",
+                "price":430.00,
+                "quantity":1,
+                "category":"women"
+        },
+        {
+                "name":"Guess Seductive",
+                "img":"https://i.ibb.co/Xxbc3GG/product17.webp",
+                "description":"Quality That Lasts The Pia Armchair takes cues from retro design. With simple designer touches keeping things fresh and modern.",
+                "price":1000.00,
+                "quantity":1,
+                "category":"men"
+        },
+        {
+                "name":"Eau De Toilette",
+                "img":"https://i.ibb.co/bN0j7kw/product29-1.webp",
+                "description":"Quality That Lasts The Pia Armchair takes cues from retro design. With simple designer touches keeping things fresh and modern.",
+                "price":300.00,
+                "quantity":1,
+                "category":"women"
+        },
+        {
+                "name":"Fragrances Collection",
+                "img":"https://i.ibb.co/3CKkJHm/product8.webp",
+                "description":"Quality That Lasts The Pia Armchair takes cues from retro design. With simple designer touches keeping things fresh and modern.",
+                "price":320.00,
+                "quantity":1,
+                "category":"men"
+        },
+        {
+                "name":"Kinair Product Sample",
+                "img":"https://i.ibb.co/3kKPxJW/product19.webp",
+                "description":"Quality That Lasts The Pia Armchair takes cues from retro design. With simple designer touches keeping things fresh and modern.",
+                "price":450.00,
+                "quantity":1,
+                "category":"women"
+        },
+        {
+                "name":"Dentoex Product Sample",
+                "img":"https://i.ibb.co/dG7B6zK/product12.webp",
+                "description":"Quality That Lasts The Pia Armchair takes cues from retro design. With simple designer touches keeping things fresh and modern.",
+                "price":230.00,
+                "quantity":1,
+                "category":"men"
+        },
+        {
+                "name":"Dail Miren Tukan",
+                "img":"https://i.ibb.co/hxNJY2K/product15-45e3971c-a767-4b36-9b05-cf915d03e7b0-1.webp",
+                "description":"Quality That Lasts The Pia Armchair takes cues from retro design. With simple designer touches keeping things fresh and modern.",
+                "price":350.00,
+                "quantity":1,
+                "category":"women"
+        },
+        {
+                "name":"Kelend Metus Sample",
+                "img":"https://i.ibb.co/RvH52xZ/product11.webp",
+                "description":"Quality That Lasts The Pia Armchair takes cues from retro design. With simple designer touches keeping things fresh and modern.",
+                "price":85.00,
+                "quantity":1,
+                "category":"men"
+        },
+        {
+                "name":"Eau De Parfum Spray",
+                "img":"https://i.ibb.co/x68zcK5/product37.webp",
+                "description":"Quality That Lasts The Pia Armchair takes cues from retro design. With simple designer touches keeping things fresh and modern.",
+                "price":120.00,
+                "quantity":1,
+                "category":"women"
+        },
+        {
+                "name":"Elizabeth Arden For Women",
+                "img":"https://i.ibb.co/sRdsJ22/pro1-871fb09e-2049-47a3-be41-bb3a90d1b772.webp",
+                "description":"Quality That Lasts The Pia Armchair takes cues from retro design. With simple designer touches keeping things fresh and modern.",
+                "price":320.00,
+                "quantity":1,
+                "category":"men"
+        },
+        {
+                "name":"Eau De Parfum Lègere",
+                "img":"https://i.ibb.co/kSwrppr/product40.webp",
+                "description":"Quality That Lasts The Pia Armchair takes cues from retro design. With simple designer touches keeping things fresh and modern.",
+                "price":320.00,
+                "quantity":1,
+                "category":"women"
+        }
+]
