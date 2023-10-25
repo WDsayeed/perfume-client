@@ -1,0 +1,15 @@
+.about-subtitle{
+        position: relative;
+        padding-left: 5.4rem;
+        margin-bottom: 20px;
+        letter-spacing: 5px;
+}
+.about-subtitle::before{
+        content: '';
+        position: absolute;
+        width: 70px;
+        height: 2px;
+        background-color: #167eab;
+        left: 0;
+        top: 1rem;
+}

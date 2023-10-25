@@ -28,7 +28,7 @@
   padding: 15px;
   padding-left: 126px;
   padding-right: 148px;
-  background-color: #ADC4CE;
+  background-color: #a0ddf7;
   color: black;
   font-weight: 700;
   transform: translateY(20);
@@ -41,12 +41,12 @@
     color: transparent;
   }
   35% {
-    background-color: #C780FA;
+    background-color: #d4a9f3;
     color: black;
   }
   
   100% {
-    background-color: #CCD6A6;
+    background-color: #ecf6c6;
     color: black;
   }
 }

@@ -15,44 +15,44 @@ const Gallery = () => {
       <div className='row-span-3 col-span-2 overflow-hidden relative transition  transform main-div'>
       <div className=""><img className='hover-img duration-500 w-full' src={galleryImg1} alt="" /></div>
       <div className="text-center bg-black bg-opacity-75 opacity-0 hover:opacity-100 text-white absolute inset-0 transition-opacity duration-200">
-            <h1 className="mt-[50%] text-2xl">Porsche 911 Carrera</h1>
+            <h1 className="mt-[50%] text-2xl text-[#afbbec] font-semibold">Chance Chanel</h1>
           </div>
       </div>
 
       <div className='overflow-hidden relative transition  transform main-div'>
       <div className=''><img className='hover-img duration-500' src={galleryImg2} alt="" /></div>
       <div className="text-center bg-black bg-opacity-75 opacity-0 hover:opacity-100 text-white absolute inset-0 transition-opacity duration-200">
-            <h1 className="mt-[30%] text-2xl">Porsche 911 Carrera</h1>
+            <h1 className="mt-[50%] text-2xl text-[#afbbec] font-semibold">Coco Chanel</h1>
           </div>
       </div>
       <div className='overflow-hidden relative transition  transform main-div'>
       <div><img className='hover-img duration-500' src={galleryImg3} alt="" /></div>
       <div className="text-center bg-black bg-opacity-75 opacity-0 hover:opacity-100 text-white absolute inset-0 transition-opacity duration-200">
-            <h1 className="mt-[30%] text-2xl">Porsche 911 Carrera</h1>
+            <h1 className="mt-[50%] text-2xl text-[#afbbec] font-semibold">Coutal</h1>
           </div>
       </div>
       <div className='overflow-hidden relative transition  transform main-div'>
       <div><img className='hover-img duration-500' src={galleryImg4} alt="" /></div>
       <div className="text-center bg-black bg-opacity-75 opacity-0 hover:opacity-100 text-white absolute inset-0 transition-opacity duration-200">
-            <h1 className="mt-[30%] text-2xl">Porsche 911 Carrera</h1>
+            <h1 className="mt-[50%] text-2xl text-[#afbbec] font-semibold">Bonywonel</h1>
           </div>
       </div>
       <div className='overflow-hidden relative transition  transform main-div'>
       <div><img className='hover-img duration-500' src={galleryImg5} alt="" /></div>
       <div className="text-center bg-black bg-opacity-75 opacity-0 hover:opacity-100 text-white absolute inset-0 transition-opacity duration-200">
-            <h1 className="mt-[30%] text-2xl">Porsche 911 Carrera</h1>
+            <h1 className="mt-[50%] text-2xl text-[#afbbec] font-semibold">My ownel</h1>
           </div>
       </div>
       <div className='overflow-hidden relative transition  transform main-div'>
       <div><img className='hover-img duration-500' src={galleryImg6} alt="" /></div>
       <div className="text-center bg-black bg-opacity-75 opacity-0 hover:opacity-100 text-white absolute inset-0 transition-opacity duration-200">
-            <h1 className="mt-[30%] text-2xl">Porsche 911 Carrera</h1>
+            <h1 className="mt-[50%] text-2xl text-[#afbbec] font-semibold">Chance Chanel</h1>
           </div>
       </div>
       <div className='overflow-hidden relative transition  transform main-div'>
       <div><img className='hover-img duration-500' src={galleryImg7} alt="" /></div>
       <div className="text-center bg-black bg-opacity-75 opacity-0 hover:opacity-100 text-white absolute inset-0 transition-opacity duration-200">
-            <h1 className="mt-[30%] text-2xl">Porsche 911 Carrera</h1>
+            <h1 className="mt-[50%] text-2xl text-[#afbbec] font-semibold">Dusita</h1>
           </div>
       </div>
       

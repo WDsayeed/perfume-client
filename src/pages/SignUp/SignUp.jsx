@@ -14,9 +14,9 @@ const SignUp = () => {
   const { createUser, updateUserProfile } = useContext(AuthContext);
 
   const navigate = useNavigate()
-  const location = useLocation()
+  // const location = useLocation()
 
-  const form = location.state?.form?.pathname || '/'
+  // const form = location.state?.form?.pathname || '/'
 
   const {
     register,
@@ -136,7 +136,7 @@ const SignUp = () => {
                   className="input input-bordered"
                 />
               </div>
-              <div className="form-control w-full max-w-xs">
+              {/* <div className="form-control w-full max-w-xs">
                 <label className="label">
                   <span className="label-text">
                     Select your role
@@ -149,7 +149,7 @@ const SignUp = () => {
                   <option>Buyer</option>
                   <option>Seller</option>
                 </select>              
-              </div>
+              </div> */}
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Photo URL</span>

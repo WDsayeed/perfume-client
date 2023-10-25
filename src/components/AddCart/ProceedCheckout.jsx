@@ -1,13 +1,19 @@
-// import UseCart from "../../hooks/UseCart";
-// import SingleCheck from "./SingleCheck";
+
+import moment from "moment/moment";
 import { useForm } from "react-hook-form";
 import { HiOutlineXMark } from "react-icons/hi2";
 
 const ProceedCheckout = ({ totalPrice }) => {
+  console.log(totalPrice)
   const { register, handleSubmit, reset } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data);
+     
+    data.purchaseDate = new Date();
+    data.month = moment().format('MMMM')
+
+    data.price = parseFloat(data.price)
+
     fetch("http://localhost:5000/order", {
       method: "POST",
       headers: { "content-type": "application/json" },
@@ -21,8 +27,6 @@ const ProceedCheckout = ({ totalPrice }) => {
   };
   return (
     <div>
-      {/* Open the modal using document.getElementById('ID').showModal() method */}
-      {/* <button className="btn" onClick={()=>}>open modal</button> */}
       <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
         <div className="modal-box">
           <div className="modal-action">
@@ -129,12 +133,6 @@ const ProceedCheckout = ({ totalPrice }) => {
           </form>
         </div>
       </dialog>
-      {/* {
-                          addCart.map(item => <SingleCheck
-                                  key={item._id}
-                                  item={item}
-                          ></SingleCheck>)
-                  } */}
     </div>
   );
 };

@@ -1,0 +1,7 @@
+.men-cover{
+        background-image: url('../../assets/men-covr.webp');
+        background-blend-mode: multiply;
+        background-color: rgb(155, 153, 153);
+        background-repeat: no-repeat;
+        background-size: cover;
+}

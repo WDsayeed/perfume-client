@@ -1,10 +1,15 @@
 import { useContext } from "react";
 import Swal from "sweetalert2";
 import { AuthContext } from "../provider/AuthProvider";
+import UseCart from "../../hooks/UseCart";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const SingleWishList = ({ wishData,handleDeleteItem }) => {
   const { user } = useContext(AuthContext);
   const { img, name, price, _id, quantity } = wishData;
+  const [, refetch] = UseCart()
+  const navigate = useNavigate()
+  const location = useLocation()
 
   const handleAddToCart = () => {
     // window.my_modal_5.showModal();
@@ -14,8 +19,9 @@ const SingleWishList = ({ wishData,handleDeleteItem }) => {
       img,
       price,
       quantity,
+      email: user?.email
     };
-    if (user) {
+    if (user && user?.email) {
       fetch("http://localhost:5000/addToCart", {
         method: "POST",
         headers: {
@@ -25,8 +31,9 @@ const SingleWishList = ({ wishData,handleDeleteItem }) => {
       })
         .then((res) => res.json())
         .then((data) => {
-          console.log(data);
+
           if (data.insertedId) {
+            refetch()
             Swal.fire({
               position: "top-center",
               icon: "success",
@@ -36,13 +43,27 @@ const SingleWishList = ({ wishData,handleDeleteItem }) => {
             });
           }
         });
+    } else {
+      Swal.fire({
+        title: "Please login to add to cart",
+        text: "You won't be able to revert this!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Login now",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          navigate("/login", {state: {from:location}});
+        }
+      });
     }
   };
 
  
 
   return (
-    <div className="relative flex justify-between border-2 my-5 gap-5 p-2  bg-[#A1CCD1] rounded-md w-full">
+    <div className="relative md:flex justify-between  items-center border-2 my-5 gap-5 p-2  bg-[#A1CCD1] rounded-md w-full">
       <button onClick={()=>handleDeleteItem(_id)} className="btn btn-circle bg-[#61677A] absolute  -right-8 -top-6 text-white">
         <svg
           xmlns="http://www.w3.org/2000/svg"

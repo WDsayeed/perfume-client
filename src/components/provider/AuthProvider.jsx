@@ -80,6 +80,8 @@ const AuthProvider = ({ children }) => {
       unsubscribe();
     };
   }, []);
+
+  
   const authInfo = {
     updateUserProfile,
     googleLogin,

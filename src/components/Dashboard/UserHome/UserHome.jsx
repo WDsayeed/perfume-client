@@ -6,9 +6,8 @@ const UserHome = () => {
         const {user} = useContext(AuthContext)
 
         return (
-                <div>
-                        <h1>user home</h1> 
-                        <h2>Hello user : { user.displayName}</h2>  
+                <div> 
+                        <h2 className="text-3xl mt-6 text-[#103060] font-medium">Hi, {user.displayName}</h2>  
                 </div>
         );
 };

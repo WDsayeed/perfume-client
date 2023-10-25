@@ -1,0 +1,14 @@
+.underLine{
+        position: relative;
+        padding-left: 5.4rem;
+        margin-bottom: 20px;
+}
+.underLine::before{
+        content: '';
+        position: absolute;
+        width: 70px;
+        height: 2px;
+        background-color: #fff;
+        left: 0;
+        top: 1rem;
+}

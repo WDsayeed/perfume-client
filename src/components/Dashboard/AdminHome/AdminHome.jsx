@@ -3,6 +3,7 @@ import React, { useContext } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import { useQuery } from "@tanstack/react-query";
+// import MonthlySalesChart from "./MonthlySalesChart";
 
 const AdminHome = () => {
   const { user } = useContext(AuthContext);
@@ -106,6 +107,9 @@ const AdminHome = () => {
         </div>
         
       </div>
+
+
+      {/* <MonthlySalesChart></MonthlySalesChart> */}
     </div>
   );
 };

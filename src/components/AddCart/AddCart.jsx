@@ -1,31 +1,28 @@
 import { HiX } from "react-icons/hi";
 import { FaCaretUp, FaCaretDown } from "react-icons/fa";
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Container from "../Container";
 import Swal from "sweetalert2";
-import {  Link, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import { HiArrowLongLeft } from "react-icons/hi2";
 import UseCart from "../../hooks/UseCart";
-import { AuthContext } from "../provider/AuthProvider";
 import ProceedCheckout from "./ProceedCheckout";
 
 const AddCart = () => {
-  const {user}= useContext(AuthContext)
+
   const navigate = useNavigate() 
   const [addCart] = UseCart()
+  console.log(addCart)
 
-  const [cartData, setCartData] = useState(addCart);
+  // const [cartData, setCartData] = useState(addCart);
+  const [cartData, setCartData] = useState([]);
 
+  useEffect(() => {
+   setCartData(addCart)
+  }, [addCart])
 
-  // useEffect(() => {
- 
-  //   fetch(`http://localhost:5000/addToCart/${user?.email}`)
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       setCartData(data);
-      
-  //     });
-  // }, [user?.email]);
+  console.log(cartData) 
+
 
   const handleIncrement = (id) => {
     // Find the item to be updated
@@ -140,6 +137,8 @@ const AddCart = () => {
     document.getElementById('my_modal_5').showModal()
   }
 
+ 
+
   return (
     <>
       <Container>
@@ -152,7 +151,9 @@ const AddCart = () => {
         <p className="caption-top block">
           You have{" "}
           <span className="font-bold text-[#116D6E] ring-2 ring-[#116D6E] rounded-full px-1">
-            {cartData?.length}
+              {
+              cartData.reduce((totalQuantity, item) => totalQuantity + item.quantity, 0)
+              }
           </span>{" "}
           items in your cart.
         </p>
@@ -239,11 +240,11 @@ const AddCart = () => {
         
         </div>
 
-        <div className="flex items-end justify-end ">
+        <div className="flex items-end md:justify-end ">
           
           <button
             onClick={handleAllDelete}
-            className="bg-slate-900 hover:bg-[#116D6E] hover:transition-colors hover:duration-300  w-1/4 py-3 text-white uppercase"
+            className="bg-slate-900 hover:bg-[#116D6E] hover:transition-colors hover:duration-300 px-3  md:w-1/4 py-3 text-white uppercase"
           >
             Clear Cart
           </button>
@@ -261,11 +262,11 @@ const AddCart = () => {
             </div>
           </div>
 
-          {/* <Link to='/checkout'> */}
-          <button onClick={()=>handleCheckout()} className="hover:bg-slate-900 bg-[#116D6E] hover:transition-colors hover:duration-300  w-1/4 py-3 text-white uppercase">
+         
+          <button onClick={handleCheckout} className="hover:bg-slate-900 bg-[#116D6E] hover:transition-colors hover:duration-300 px-3 mt-3  md:w-1/4 py-3 text-white uppercase">
             proceed to checkout
           </button>
-          {/* </Link> */}
+          
         </div>
       </Container>
     </>

@@ -24,6 +24,8 @@ import PaymentSuccess from "./pages/Paymentsuccess/PaymentSuccess";
 import PaymentFailed from "./pages/PaymentFailed/PaymentFailed";
 import UserHome from "./components/Dashboard/UserHome/UserHome";
 import AdminHome from "./components/Dashboard/AdminHome/AdminHome";
+import OrderDetails from "./components/Dashboard/OrderDetails/OrderDetails";
+import Blog from "./pages/Blog/Blog";
 const queryClient = new QueryClient();
 
 const router = createBrowserRouter([
@@ -58,6 +60,11 @@ const router = createBrowserRouter([
       {
         path: "shop",
         element: <Shop></Shop>,
+      },
+     
+      {
+        path: "blog",
+        element: <Blog></Blog>,
       },
      
 
@@ -100,6 +107,10 @@ const router = createBrowserRouter([
       {
         path: "addItem",
         element: <AdminRoute><AddItem></AddItem></AdminRoute>,
+      },
+      {
+        path: "orderDetails",
+        element: <AdminRoute><OrderDetails></OrderDetails></AdminRoute>,
       },
     ],
   },

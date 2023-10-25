@@ -37,7 +37,7 @@ const AddItem = () => {
                 Swal.fire({
                   position: 'top-end',
                   icon: 'success',
-                  title: 'Your work has been saved',
+                  title: 'Your product has been added',
                   showConfirmButton: false,
                   timer: 1500
                 })
@@ -132,7 +132,7 @@ const AddItem = () => {
           <input
             type="submit"
             value="Add Item"
-            className="hover:bg-slate-900 bg-[#116D6E] hover:transition-colors hover:duration-300  w-2/4 py-2 text-white uppercase mt-5"
+            className="hover:bg-slate-900 bg-[#cfe6ba] hover:transition-colors hover:duration-300  w-2/4 py-2 text-black hover:text-white font-semibold cursor-pointer uppercase mt-5"
           />
         </div>
       </form>

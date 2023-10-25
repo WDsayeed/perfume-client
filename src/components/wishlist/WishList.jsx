@@ -47,7 +47,7 @@ const WishList = () => {
         return (
 
                 <div className='bg-[#C8E4B2]'>
-    <div className=' grid grid-cols-2 mx-auto w-[70%] gap-x-24  py-10 pt-32'>
+    <div className=' grid md:grid-cols-2 mx-auto w-[70%] gap-x-24  py-10 pt-32'>
                         {
                                 wishListData.map(wishData=> <SingleWishList
                                 key={wishData._id}

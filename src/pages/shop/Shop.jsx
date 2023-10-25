@@ -6,6 +6,7 @@ const Shop = () => {
   const [filteredPerfumes, setFilteredPerfumes] = useState([]);
   const [rememberMe, setRememberMe] = useState(false);
   const [selectedOption, setSelectedOption] = useState('lowest')
+  const [searchText, setSearchText] = useState("")
   const [priceFilters, setPriceFilters] = useState({
     low: false,
     medium: false,
@@ -22,6 +23,19 @@ const Shop = () => {
       });
   }, []);
 
+
+  const handleSearchKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      // Perform the search here, e.g., update the filteredPerfumes based on the search query
+      // You can reuse your existing code for fetching data with the search query
+      fetch(`http://localhost:5000/jobSearchByTitle/${searchText}`)
+        .then((res) => res.json())
+        .then((data) => {
+          setFilteredPerfumes(data);
+        });
+    }
+  };
+
   const handleCategoryFilter = (category) => {
     if (category === "All") {
       setFilteredPerfumes(bestPerfumes); // Show all products
@@ -34,7 +48,6 @@ const Shop = () => {
   };
 
   const onOptionChangeHandler = (event) => {
-    console.log("User Selected Value - ", event.target.value);
 
     const selectedValue = event.target.value;
     setSelectedOption(selectedValue);
@@ -48,9 +61,6 @@ const Shop = () => {
       });
   };
 
-  // const handleRememberMeChange = () => {
-   
-  // };
 
   const handlePriceFilterChange = (filterType) => {
     setPriceFilters({
@@ -88,9 +98,11 @@ const Shop = () => {
 
   return (
     <div className="mt-24  max-w-[1620px] mx-auto xl:px-20 md:px-10 sm:px-2 px-4 py-7">
-      <div className="grid grid-flow-col gap-4 mt-10">
+      <div className="grid md:grid-flow-col gap-4 mt-10">
         <div className="row-span-3 px-4 ">
           <input
+            onChange={(e) => setSearchText(e.target.value)}
+            onKeyDown={handleSearchKeyDown}
             type="text"
             placeholder="Search here"
             className="input input-bordered w-full max-w-xs"
