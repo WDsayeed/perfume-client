@@ -46,7 +46,7 @@ const AddCart = () => {
     const updateData = { quantity: updateQuantity };
     console.log(updateData)
 
-    fetch(`http://localhost:5000/addToCart/${id}`, {
+    fetch(`https://perfume-ecommerce-server-1k4m3oy32-wdsayeed.vercel.app/addToCart/${id}`, {
       method: 'PUT',
       headers: {
       'content-type':'application/json'
@@ -85,7 +85,7 @@ const AddCart = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/addToCart/${id}`, {
+        fetch(`https://perfume-ecommerce-server-1k4m3oy32-wdsayeed.vercel.app/addToCart/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -112,7 +112,7 @@ const AddCart = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/addToCart`, {
+        fetch(`https://perfume-ecommerce-server-1k4m3oy32-wdsayeed.vercel.app/addToCart`, {
           method: "DELETE",
         })
           .then((res) => res.json())

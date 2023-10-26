@@ -5,7 +5,7 @@ const OrderDetails = () => {
         const [orderDetails, setOrderDetails] = useState([])
 
         useEffect(() => {
-                fetch('http://localhost:5000/orderDetails')
+                fetch('https://perfume-ecommerce-server-1k4m3oy32-wdsayeed.vercel.app/orderDetails')
                         .then(res => res.json())
                         .then(data => {
                                 console.log(data)

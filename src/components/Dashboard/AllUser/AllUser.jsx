@@ -13,7 +13,7 @@ const AllUser = () => {
   })
 
   // useEffect(() => {
-  //   fetch("http://localhost:5000/users")
+  //   fetch("https://perfume-ecommerce-server-1k4m3oy32-wdsayeed.vercel.app/users")
   //     .then((res) => res.json())
   //     .then((data) => setUsers(data));
   // }, []);
@@ -30,7 +30,7 @@ const AllUser = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/users/${id}`, {
+        fetch(`https://perfume-ecommerce-server-1k4m3oy32-wdsayeed.vercel.app/users/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -47,7 +47,7 @@ const AllUser = () => {
   }
 
   const handleMakeAdmin = (user) => {
-    fetch(`http://localhost:5000/users/admin/${user._id}`, {
+    fetch(`https://perfume-ecommerce-server-1k4m3oy32-wdsayeed.vercel.app/users/admin/${user._id}`, {
     method:'PATCH'
     })
       .then(res => res.json())
@@ -66,7 +66,7 @@ const AllUser = () => {
   }
 
   // const handleMakeManager = (user) => {
-  //   fetch(`http://localhost:5000/users/manager/${user._id}`, {
+  //   fetch(`https://perfume-ecommerce-server-1k4m3oy32-wdsayeed.vercel.app/users/manager/${user._id}`, {
   //   method:'PATCH'
   //   })
   //     .then(res => res.json())

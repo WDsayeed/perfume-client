@@ -13,13 +13,13 @@ const BestSelPerfume = () => {
     setSeeMore(true);
   };
   useEffect(() => {
-    fetch("http://localhost:5000/bestPerfume")
+    fetch("https://perfume-ecommerce-server-1k4m3oy32-wdsayeed.vercel.app/bestPerfume")
       .then((res) => res.json())
       .then((data) => setBestPerfumes(data));
   }, []);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/bestPerfume/${id}`)
+    fetch(`https://perfume-ecommerce-server-1k4m3oy32-wdsayeed.vercel.app/bestPerfume/${id}`)
       .then((res) => res.json())
       .then((data) => setSelectedPerfume(data));
   }, [id]);

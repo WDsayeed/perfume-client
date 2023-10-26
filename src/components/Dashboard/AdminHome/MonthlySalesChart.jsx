@@ -6,7 +6,7 @@
 
 //   useEffect(() => {
 //     // Fetch monthly sales data from your Express API
-//     fetch("http://localhost:5000/monthly-sales")
+//     fetch("https://perfume-ecommerce-server-1k4m3oy32-wdsayeed.vercel.app/monthly-sales")
 //       .then((response) => response.json())
 //       .then((data) => setSalesData(data))
 //       .catch((error) => console.error(error));

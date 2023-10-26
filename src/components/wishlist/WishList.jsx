@@ -10,7 +10,7 @@ const WishList = () => {
 
 
         useEffect(()=>{
-                fetch('http://localhost:5000/allWishList')
+                fetch('https://perfume-ecommerce-server-1k4m3oy32-wdsayeed.vercel.app/allWishList')
                 .then(res=> res.json())
                 .then(data=> {
                         console.log(data)
@@ -29,7 +29,7 @@ const WishList = () => {
                   confirmButtonText: "Yes, delete it!",
                 }).then((result) => {
                   if (result.isConfirmed) {
-                    fetch(`http://localhost:5000/allWishList/${id}`, {
+                    fetch(`https://perfume-ecommerce-server-1k4m3oy32-wdsayeed.vercel.app/allWishList/${id}`, {
                       method: "DELETE",
                     })
                       .then((res) => res.json())

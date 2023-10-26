@@ -132,8 +132,8 @@ const Header = () => {
             <li className="font-bold">
             <Link to='/blog'>Blog</Link>
             </li>
-            {/* <li><Link to='/dashboard'>Dashboard</Link></li> */}
-            {isAdmin ? (
+
+           {isAdmin ? (
               <li className="font-bold">
                 <Link to="/dashboard/adminHome">Dashboard</Link>
               </li>
@@ -142,6 +142,7 @@ const Header = () => {
                 <Link to="/dashboard/userHome">Dashboard</Link>
               </li>
             )}
+           
 
             {user && (
               <li onClick={handleLogOut}>

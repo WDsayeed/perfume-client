@@ -15,7 +15,7 @@ const Shop = () => {
   const options = ["Price(lowest)", "Price(highest)"];
 
   useEffect(() => {
-    fetch("http://localhost:5000/shop")
+    fetch("https://perfume-ecommerce-server-1k4m3oy32-wdsayeed.vercel.app/shop")
       .then((res) => res.json())
       .then((data) => {
         setBestPerfumes(data);
@@ -28,7 +28,7 @@ const Shop = () => {
     if (e.key === 'Enter') {
       // Perform the search here, e.g., update the filteredPerfumes based on the search query
       // You can reuse your existing code for fetching data with the search query
-      fetch(`http://localhost:5000/jobSearchByTitle/${searchText}`)
+      fetch(`https://perfume-ecommerce-server-1k4m3oy32-wdsayeed.vercel.app/jobSearchByTitle/${searchText}`)
         .then((res) => res.json())
         .then((data) => {
           setFilteredPerfumes(data);
@@ -54,7 +54,7 @@ const Shop = () => {
     const queryParams =
       selectedValue === "Price(lowest)" ? "lowest" : "highest";
 
-    fetch(`http://localhost:5000/shop?sortBy=${queryParams}`)
+    fetch(`https://perfume-ecommerce-server-1k4m3oy32-wdsayeed.vercel.app/shop?sortBy=${queryParams}`)
       .then((res) => res.json())
       .then((data) => {
         setFilteredPerfumes(data);
@@ -68,7 +68,7 @@ const Shop = () => {
       [filterType]: !priceFilters[filterType],
     });
 
-    fetch(`http://localhost:5000/shop?sortBy=${selectedOption}&priceFilters=${filterType}`)
+    fetch(`https://perfume-ecommerce-server-1k4m3oy32-wdsayeed.vercel.app/shop?sortBy=${selectedOption}&priceFilters=${filterType}`)
     .then((res) => res.json())
     .then((data) => {
       setFilteredPerfumes(data);
@@ -134,7 +134,7 @@ const Shop = () => {
                 <input
                   type="checkbox"
                   checked={priceFilters.low}
-                  onClick={() => handlePriceFilterChange("low")}
+                  onChange={() => handlePriceFilterChange("low")}
                   className="checkbox checkbox-primary"
                 />
                 <span className="label-text">$50 - $100</span>
@@ -145,7 +145,7 @@ const Shop = () => {
                 <input
                   type="checkbox"
                   checked={priceFilters.medium}
-                  onClick={() => handlePriceFilterChange("medium")}
+                  onChange={() => handlePriceFilterChange("medium")}
                   className="checkbox checkbox-primary"
                 />
                 <span className="label-text">$100 - $500</span>
@@ -156,7 +156,7 @@ const Shop = () => {
                 <input
                   type="checkbox"
                   checked={priceFilters.high}
-            onClick={() => handlePriceFilterChange("high")}
+            onChange={() => handlePriceFilterChange("high")}
                   className="checkbox checkbox-primary"
                 />
                 <span className="label-text">$500 - $1000</span>

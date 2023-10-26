@@ -14,9 +14,9 @@ const SignUp = () => {
   const { createUser, updateUserProfile } = useContext(AuthContext);
 
   const navigate = useNavigate()
-  // const location = useLocation()
+  const location = useLocation()
 
-  // const form = location.state?.form?.pathname || '/'
+  const from = location.state?.from?.pathname || '/'
 
   const {
     register,
@@ -35,7 +35,7 @@ const SignUp = () => {
       updateUserProfile(data.name, data.photoURL)
         .then(() => {
           const saveUser = { name: data.name, email: data.email , role: data.category}
-          fetch("http://localhost:5000/users", {
+          fetch("https://perfume-ecommerce-server-1k4m3oy32-wdsayeed.vercel.app/users", {
             method: 'POST',
             headers: {
             'content-type': 'application/json'
@@ -46,14 +46,7 @@ const SignUp = () => {
             .then(data => {
               if (data.insertedId) {
                 reset();
-                Swal.fire({
-                  position: "top-end",
-                  icon: "success",
-                  title: "user created successfully",
-                  showConfirmButton: false,
-                  timer: 1500,
-                });
-                navigate("/");
+                navigate(from, { replace: true });
               }
             })
       })

@@ -5,7 +5,7 @@ const UsePerfume = () => {
         const { data: allPerfume =  [], isLoading: loading, refetch} = useQuery({
                 queryKey: ['allPerfume'],
                 queryFn: async () => {
-                        const res = await fetch("http://localhost:5000/allPerfume");
+                        const res = await fetch("https://perfume-ecommerce-server-1k4m3oy32-wdsayeed.vercel.app/allPerfume");
                         return res.json()
                 }
         })

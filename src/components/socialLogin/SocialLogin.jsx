@@ -15,7 +15,7 @@ const SocialLogin = () => {
                         const loggedUser = result.user 
                         console.log(loggedUser)
                         const savedUser = {name: loggedUser.displayName, email: loggedUser.email, role: 'Seller'}
-                        fetch('http://localhost:5000/users',{
+                        fetch('https://perfume-ecommerce-server-1k4m3oy32-wdsayeed.vercel.app/users',{
                                 method:'POST',
                                 headers:{
                                         'content-type':'application/json'
@@ -37,7 +37,7 @@ const SocialLogin = () => {
         //                 const loggedUser = result.user 
         //                 console.log(loggedUser)
         //                 const savedUser = {name: loggedUser.displayName, email: loggedUser.email}
-        //                 fetch('http://localhost:5000/user',{
+        //                 fetch('https://perfume-ecommerce-server-1k4m3oy32-wdsayeed.vercel.app/user',{
         //                         method:'POST',
         //                         headers:{
         //                                 'content-type':'application/json'

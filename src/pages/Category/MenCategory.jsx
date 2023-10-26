@@ -10,7 +10,7 @@ const MenCategory = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    fetch("http://localhost:5000/category")
+    fetch("https://perfume-ecommerce-server-1k4m3oy32-wdsayeed.vercel.app/category")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -20,7 +20,7 @@ const MenCategory = () => {
   }, []);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/bestPerfume/${id}`)
+    fetch(`https://perfume-ecommerce-server-1k4m3oy32-wdsayeed.vercel.app/bestPerfume/${id}`)
       .then((res) => res.json())
       .then((data) => setSelectedPerfume(data));
   }, [id]);

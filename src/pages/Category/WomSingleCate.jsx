@@ -23,7 +23,7 @@ const WomSingleCate = ({ item, setId, setIsOpen }) => {
     };
 
     if (user) {
-      fetch("http://localhost:5000/wishList", {
+      fetch("https://perfume-ecommerce-server-1k4m3oy32-wdsayeed.vercel.app/wishList", {
         method: "POST",
         headers: {
           "content-type": "application/json",
@@ -67,7 +67,7 @@ const WomSingleCate = ({ item, setId, setIsOpen }) => {
       email: user?.email
     };
     if (user && user?.email) {
-      fetch("http://localhost:5000/addToCart", {
+      fetch("https://perfume-ecommerce-server-1k4m3oy32-wdsayeed.vercel.app/addToCart", {
         method: "POST",
         headers: {
           "content-type": "application/json",

@@ -14,7 +14,7 @@ const ProceedCheckout = ({ totalPrice }) => {
 
     data.price = parseFloat(data.price)
 
-    fetch("http://localhost:5000/order", {
+    fetch("https://perfume-ecommerce-server-1k4m3oy32-wdsayeed.vercel.app/order", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),
